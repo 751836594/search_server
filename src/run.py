@@ -11,12 +11,12 @@
 @file: run.py
 @time: 2018/1/3 下午2:46
 """
-from pypinyin import lazy_pinyin
+import json
+import traceback
 
-
-def func():
-    pass
-
+from help.search import Search
 
 if __name__ == '__main__':
-    s = lazy_pinyin('你hai好吗')
+    tree = Search()
+    tree.add('你好吗')
+    print(tree.search('nih'))
