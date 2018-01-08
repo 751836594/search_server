@@ -16,7 +16,15 @@ import traceback
 
 from help.search import Search
 
+
+def test_demo():
+    search = Search()
+    search.add('你是谁')
+
+    assert {} != search.search('你')
+    assert {} != search.search('你s')
+    assert {} != search.search('ni是s')
+
+
 if __name__ == '__main__':
-    tree = Search()
-    tree.add('你好吗')
-    print(tree.search('nih'))
+    pass
